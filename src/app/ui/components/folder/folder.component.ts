@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-folder',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./folder.component.css']
 })
 export class FolderComponent implements OnInit {
-
+  @Input() item: any;
   constructor() { }
 
   ngOnInit(): void {

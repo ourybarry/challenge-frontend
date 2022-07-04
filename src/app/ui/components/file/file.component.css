@@ -1,0 +1,20 @@
+i.file_icon{
+    color: blue;
+}
+button.file_item{
+    width: 100%; text-align:left;
+    /* background-color: rgba(255, 140, 0, 0.392); */
+}
+
+button.hidden{
+    visibility: hidden;
+}
+
+.form{
+    visibility: hidden;
+
+}
+#download{
+    /* visibility: hidden; */
+    display: none;
+}

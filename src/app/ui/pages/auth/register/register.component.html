@@ -1,12 +1,31 @@
 <div class="form_wrapper">
-    <div class="form">
-        <div class="form_header">Register</div>
-        <div class="form_content">
-            <app-text-input></app-text-input>
-            <app-text-input></app-text-input>
-            <app-text-input></app-text-input>
-            <app-button></app-button>
-        </div>
-        <a routerLink="/login">Sign in</a>
-    </div>
+    <mat-card>
+        <mat-card-title>
+            <div class="form_header">Register</div>
+        </mat-card-title>
+        <mat-card-content>
+        <form [formGroup]="registerForm" class="form">
+            <div class="form_content">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput formControlName="email" type="email">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput formControlName="password" type="password">
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password confirm</mat-label>
+                    <input matInput formControlName="passwordConfirm" type="password">
+                </mat-form-field>
+                
+            </div>
+            <!-- <a class="link" routerLink="/register">Reset Password</a> -->
+            <div class="row">
+                <button (click)="onSubmit()" mat-flat-button color="primary">Register</button>
+                <a class="link" routerLink="/auth/login">Sign in</a>
+            </div> 
+        </form>
+    </mat-card-content>
+    </mat-card>
 </div>

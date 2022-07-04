@@ -1,1 +1,15 @@
-<p>file works!</p>
+<button class="file_item" mat-stroked-button (contextmenu)="openCustomContextMenu($event)" [disabled]="item.status !='available'"
+    [matTooltip]="item.name" >
+    <i class="file_icon fa-solid fa-file"></i>
+    {{ item.name | slice : 0 : 30 }}<ng-container *ngIf="item.name.length > 30">...</ng-container>
+    <button #menuTrigger [matMenuTriggerFor]="menu" class="hidden"></button>
+</button>
+<mat-menu #menu="matMenu">
+    <button (click)="downloadFile(item.fileId)" mat-menu-item><i class="fa-solid fa-angles-down"></i> Download</button>
+    <button (click)="openFileDetailsDialog()"  mat-menu-item><i class="fa-solid fa-circle-info"></i> Details</button>
+    <button (click)="deleteFile()" mat-menu-item style="color: red;"><i class="fa-solid fa-trash"></i> Delete</button>
+</mat-menu>
+<form ngNoForm [action]="downloadLink" method="post">
+    <input name="jwtToken" type="hidden" [value]="getUserToken()">
+    <button id="download" #downloadButton type="submit"></button>
+</form>

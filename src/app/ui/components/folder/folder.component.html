@@ -1,1 +1,4 @@
-<p>folder works!</p>
+<a routerLink="/home/explore" [queryParams]="{'subDir':item.id }" style="width: 100%; text-align:left" mat-stroked-button [matTooltip]="item.name">
+    <i class="fas fa-folder"></i>
+    {{ item.name | slice : 0 : 30 }}<ng-container *ngIf="item.name.length > 30">...</ng-container>
+</a>

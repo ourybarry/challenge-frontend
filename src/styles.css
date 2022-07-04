@@ -1,3 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .form_wrapper{
     margin: 0 auto;
     position: absolute;
@@ -5,3 +16,31 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+.link{
+    color: rgb(36, 36, 225);
+    text-decoration: none;
+}
+.link:hover{
+    text-decoration: underline;
+}
+.form_content{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h2{
+    font-weight: normal;
+    font-size: 24px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
