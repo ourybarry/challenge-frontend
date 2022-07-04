@@ -1,0 +1,9 @@
+th,td{
+    text-align: left;
+    font-weight: normal;
+    padding: 10px;
+}
+
+th{
+    color: #a1a1a1;
+}

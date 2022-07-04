@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Upload File</h1>
+<div mat-dialog-content>
+    <input (change)="onFileSelect($event)" type="file">
+    <mat-checkbox [(ngModel)]="encryptionEnabled">
+        Encrypt file
+    </mat-checkbox>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button [mat-dialog-close]="{'fileData':selectedFile, encryptionEnabled}" [disabled]="selectedFile == null">Upload</button>
+</div>

@@ -1,0 +1,16 @@
+<div>
+    <app-side-nav-header></app-side-nav-header>
+    <hr class="divider">
+    <!-- <div class="nav_section">
+        <app-side-nav-list-item itemTitle="Dashboard" icon="fa-solid fa-dashboard" targetRoute="dashboard"></app-side-nav-list-item>
+    </div>
+    <hr class="divider"> -->
+    <h4>Explore</h4>
+    <app-side-nav-explorer></app-side-nav-explorer>
+    <hr class="divider">
+    <div class="nav_section">
+        <!-- <app-side-nav-list-item itemTitle="Shared with me" icon="fa-solid fa-user-group" targetRoute="shared-with-me"></app-side-nav-list-item>
+        <app-side-nav-list-item itemTitle="Files i shared" icon="fa-solid fa-share-nodes" targetRoute="files-i-shared"></app-side-nav-list-item> -->
+        <app-side-nav-list-item itemTitle="Recycle bin" [icon]="'fa-solid fa-trash'" targetRoute="trash"></app-side-nav-list-item>
+    </div>
+</div>

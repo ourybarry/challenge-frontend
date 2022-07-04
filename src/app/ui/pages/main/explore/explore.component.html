@@ -1,0 +1,16 @@
+<div class="header">
+    <h2 class="header_title">Explore</h2>
+   </div>
+   
+   <div class="explore_content">
+       <div class="content_header">
+           <app-toolbar (refreshDirectory)="refreshDirectory()"></app-toolbar>
+       </div>
+       <div class="items">
+            <ng-container *ngFor="let item of items">
+                <app-folder *ngIf="item.itemType == 'directory'" [item]="item"></app-folder>
+                <app-file (refresh)="refreshDirectory()" *ngIf="item.itemType == 'file'" [item]="item"></app-file>
+            </ng-container>
+       </div>
+   </div>
+

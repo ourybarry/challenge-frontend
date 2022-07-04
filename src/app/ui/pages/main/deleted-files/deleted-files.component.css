@@ -1,0 +1,20 @@
+.content{
+    background-color: #fff;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td{
+    text-align: left;
+    padding: 5px;
+    font-weight: normal;
+}
+th{
+    color: rgb(177, 177, 177);
+}
+
+tr{
+    border-top: solid 1px #d3d3d3;
+    height: 40px;
+}

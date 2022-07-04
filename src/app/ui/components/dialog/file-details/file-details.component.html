@@ -1,0 +1,44 @@
+<h3 mat-dialog-title>{{item.name}}</h3>
+<div mat-dialog-content>
+    <table>
+        <!-- <tr>
+            <th>Name</th>
+            <td></td>
+        </tr> -->
+        <tr>
+            <th>Type</th>
+            <td>{{item.itemType}}</td>
+        </tr>
+        <tr>
+            <th>Mime</th>
+            <td>{{item.mimeType}}</td>
+        </tr>
+        <tr>
+            <th>Uploaded At</th>
+            <td>{{item.createdAt | date }}</td>
+        </tr>
+        <tr>
+            <th>Updated at</th>
+            <td>{{item.updatedAt | date }}</td>
+        </tr>
+        <tr>
+            <th>Document id</th>
+            <td>{{ item.fileId }}</td>
+        </tr>
+        <tr>
+            <th>Owner</th>
+            <td>{{ item.owner.email }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ item.status }}</td>
+        </tr>
+        <tr>
+            <th>Size</th>
+            <td>{{ item.size }}</td>
+        </tr>
+    </table>
+</div>
+<div mat-dialog-actions>
+    <button mat-stroked-button mat-dialog-close>Close</button>
+</div>

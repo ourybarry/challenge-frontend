@@ -1,0 +1,13 @@
+<div class="toolbar_wrapper">
+    <div class="toolbar_left">
+        <a routerLink="/home/explore" [queryParams]="{'subDir': getParent()}" mat-flat-button color="primary"><i class="fa-solid fa-arrow-up"></i></a>
+        <div class="path">
+            <a routerLink="/home/explore" [queryParams]="{'subDir': item.id}" mat-stroked-button *ngFor="let item of path">{{item.name}}</a>
+        </div>
+    </div>
+    <div class="toolbar_actions">
+        <input (change)="onFileInput($event)" type="file" name="file" #fileInput id="fileInput"/>
+        <button (click)="openDirectoryCreationDialog()" mat-stroked-button>New Directory</button>
+        <button (click)="triggerFileInput()" class="btn_primary"><i class="fa-solid fa-plus"></i>Upload file</button>
+    </div>
+</div>

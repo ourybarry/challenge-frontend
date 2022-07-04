@@ -1,0 +1,29 @@
+<div class="header">
+    <h2 class="header_title">Trash</h2>
+</div>
+
+<div class="content">
+    <mat-card>
+        <div mat-card-content>
+            <table>
+                <thead>
+                    <th>Name</th>
+                    <th>Size</th>
+                    <th>Uploaded</th>
+                    <th>Actions</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of items">
+                        <td>{{item.name}}</td>
+                        <td>{{item.size / (1024*1024) | number : '1.0-2'}} MB</td>
+                        <td>{{item.createdAt | date }}</td>
+                        <td>
+                            <button (click)="restoreItem(item.id)" mat-stroked-button style="color: blue;" matTooltip="Restore item"><i class="fa-solid fa-recycle"></i></button>
+                            <button (click)="wipeItem(item.id)" mat-flat-button style="color: red;" matTooltip="Permanent delete"><i class="fa-solid fa-trash-can"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </mat-card>
+</div>
