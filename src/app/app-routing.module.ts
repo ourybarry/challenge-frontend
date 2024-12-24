@@ -15,7 +15,10 @@ import { NotFoundComponent } from './ui/pages/not-found/not-found.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
-    path: 'home', component: HomeComponent, canActivate: [AuthGuardGuard], children: [
+    path: 'home', 
+    component: HomeComponent, 
+    canActivate: [AuthGuardGuard], 
+    children: [
       { path: '', redirectTo: 'explore', pathMatch: 'full' },
       // { path: 'dashboard', component: DashboardComponent },
       { path: 'explore', component: ExploreComponent},
